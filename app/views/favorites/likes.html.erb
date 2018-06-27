@@ -1,0 +1,13 @@
+<div class="row">
+  <h3 class="panel-title">LIKES一覧</h3>
+    <div class="col-xs-8">
+      <ul class="nav nav-tabs nav-justified">
+        <% @favolite_microposts.each do |favolite_microposts| %>
+          <li class="<%= 'active' if current_page?(likes_path(@favolite_microposts)) %>">
+            <%= link_to likes_path(@favolite_microposts) do %>
+            <%= favolite_microposts.content %></li>
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+</div>
